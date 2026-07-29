@@ -168,6 +168,8 @@ export default {
                 const q = opts.query?.q;
                 const locale = opts.query?.locale?.replace?.("-", "_")?.toLowerCase();
 
+                if (!url.includes("/gifs/")) return orig(...args);
+
                 if (url.endsWith("/trending-search") || url.endsWith("/trending_search")) {
                     return makeThenable(Promise.resolve({ body: [] }));
                 }
