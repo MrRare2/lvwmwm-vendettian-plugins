@@ -6,15 +6,16 @@ const getPermName = findByProps("getPermissionName")?.getPermissionName ?? findB
 export const PERMISSION_CATEGORIES: { name: string; permissions: string[] }[] = [
     {
         name: "General",
-        permissions: ["ADMINISTRATOR", "VIEW_AUDIT_LOG", "MANAGE_GUILD"],
+        permissions: ["ADMINISTRATOR", "VIEW_AUDIT_LOG", "MANAGE_GUILD", "VIEW_GUILD_ANALYTICS"],
     },
     {
         name: "Text",
         permissions: [
-            "SEND_MESSAGES", "MANAGE_MESSAGES", "MENTION_EVERYONE", "ATTACH_FILES",
-            "ADD_REACTIONS", "SEND_TTS_MESSAGES", "USE_EXTERNAL_EMOJI",
+            "SEND_MESSAGES", "MANAGE_MESSAGES", "MENTION_EVERYONE", "ATTACH_FILES", "SEND_POLLS",
+            "ADD_REACTIONS", "SEND_TTS_MESSAGES", "USE_EXTERNAL_EMOJIS",
             "USE_EXTERNAL_STICKERS", "USE_EXTERNAL_SOUNDS", "SEND_VOICE_MESSAGES",
             "EMBED_LINKS", "READ_MESSAGE_HISTORY", "USE_APPLICATION_COMMANDS",
+            "PIN_MESSAGES", "BYPASS_SLOWMODE",
         ],
     },
     {
@@ -22,6 +23,7 @@ export const PERMISSION_CATEGORIES: { name: string; permissions: string[] }[] = 
         permissions: [
             "CONNECT", "SPEAK", "MUTE_MEMBERS", "DEAFEN_MEMBERS", "MOVE_MEMBERS",
             "USE_VAD", "PRIORITY_SPEAKER", "STREAM", "USE_SOUNDBOARD",
+            "SET_VOICE_CHANNEL_STATUS", "REQUEST_TO_SPEAK"
         ],
     },
     {
@@ -48,7 +50,7 @@ export const PERMISSION_CATEGORIES: { name: string; permissions: string[] }[] = 
         permissions: [
             "MANAGE_THREADS", "CREATE_PUBLIC_THREADS", "CREATE_PRIVATE_THREADS",
             "SEND_MESSAGES_IN_THREADS", "MANAGE_EVENTS",
-            "VIEW_CREATOR_MONETIZATION_ANALYTICS", "USE_CREATED_WEBHOOKS",
+            "VIEW_CREATOR_MONETIZATION_ANALYTICS", "USE_CREATED_WEBHOOKS", "USE_EMBEDDED_ACTIVITIES", "USE_EXTERNAL_APPS",
         ],
     },
 ];

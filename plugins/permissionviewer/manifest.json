@@ -1,10 +1,14 @@
 {
     "name": "PermissionViewer",
-    "description": "View the permissions a user or channel has, and the roles of a server",
+    "description": "View the permissions a user or channel has, and the roles of a server.",
     "authors": [
         {
             "name": "Livie",
             "id": "755950362342457384"
+        },
+        {
+            "name": "mrrare",
+            "id": "1195983543176810606"
         }
     ],
     "main": "src/index.ts",
