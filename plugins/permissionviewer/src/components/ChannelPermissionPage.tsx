@@ -152,7 +152,7 @@ export default function ChannelPermsView({ channelId }: { channelId: string }) {
                             const avatarUrl = user?.getAvatarURL?.(true, 64) ?? "https://cdn.discordapp.com/embed/avatars/" + Number((BigInt(userId) >> 22n) % 6n) + ".png";
                             const { allowed, denied } = getPermsFromOverwrite(ow, Perms);
                             return (
-                                <RN.Pressable key={ow.id} onPress={() => showUserProfile?.({ userId: ow.id, guildId: guildId })} style={({ pressed }: any) => ({ paddingHorizontal: 16, paddingVertical: 10, borderBottomWidth: 0.5, borderBottomColor: sc("background-modifier-accent"), backgroundColor: pressed ? sc("background-modifier-hover") : "transparent" })}>
+                                <RN.Pressable key={ow.id} onPress={() => showUserProfile?.({ userId: ow.id })} style={({ pressed }: any) => ({ paddingHorizontal: 16, paddingVertical: 10, borderBottomWidth: 0.5, borderBottomColor: sc("background-modifier-accent"), backgroundColor: pressed ? sc("background-modifier-hover") : "transparent" })}>
                                     <RN.View style={{ flexDirection: "row", alignItems: "center", marginBottom: 4 }}>
                                         {avatarUrl && <RN.Image source={{ uri: avatarUrl }} style={{ width: 20, height: 20, borderRadius: 10, marginRight: 8 }} />}
                                         <T variant="text-md/semibold">{name}</T>
